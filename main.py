@@ -27,8 +27,12 @@ def selecionar_arquivo():
     if caminho_docx:
         converter_docx_para_pdf(caminho_docx)
 
+def local_arquivos():
+    caminho_docx = filedialog.askopenfilename(filetypes=[("Arquivos PDF", "*.pdf")])
+    return caminho_docx
 
 janela = tk.Tk()
+janela.geometry("200x200")
 janela.title("Conversor DOCX para PDF")
 
 botao_selecionar = tk.Button(janela, text="Selecionar Arquivo DOCX", command=selecionar_arquivo)
@@ -38,4 +42,6 @@ progresso_variavel = tk.DoubleVar()
 progresso_barra = ttk.Progressbar(janela, variable=progresso_variavel, maximum=100)
 progresso_barra.pack(pady=10)
 
+button_open_local = tk.Button(janela, text="Local do arquivo", command=local_arquivos)
+button_open_local.pack(pady=5)
 janela.mainloop()
