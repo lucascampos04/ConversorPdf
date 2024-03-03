@@ -1,3 +1,4 @@
+import subprocess
 import tkinter as tk
 from tkinter import filedialog
 from docx2pdf import convert
@@ -28,8 +29,9 @@ def selecionar_arquivo():
         converter_docx_para_pdf(caminho_docx)
 
 def local_arquivos():
-    caminho_docx = filedialog.askopenfilename(filetypes=[("Arquivos PDF", "*.pdf")])
-    return caminho_docx
+    caminho_pdf = filedialog.askopenfilename(filetypes=[("Arquivos PDF", "*.pdf")])
+    if caminho_pdf:
+        subprocess.run("start", "", caminho_pdf, shell=True)
 
 janela = tk.Tk()
 janela.geometry("200x200")
