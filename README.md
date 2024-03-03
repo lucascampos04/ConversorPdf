@@ -6,3 +6,7 @@ Este é um simples conversor de documentos DOCX para PDF desenvolvido em Python,
 - Interface gráfica amigável para seleção de arquivos DOCX.
 - Barra de progresso que indica o status da conversão.
 - Facilidade de uso para converter rapidamente documentos DOCX em PDF.
+
+## Como Usar
+1 - Rodar o executavel
+<img src="./public/img/Primeira.png"/>
